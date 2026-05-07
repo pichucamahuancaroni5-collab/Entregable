@@ -1,0 +1,166 @@
+:root {
+  --farma: #3454d1;
+  --farma-dark: #213da8;
+  --farma-soft: #eef2ff;
+  --aqua: #00b8a9;
+  --pink: #f72585;
+  --text: #17223b;
+  --muted: #667085;
+  --yape: #7427c9;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #f6f8ff 0%, #f2fbff 46%, #fff7fb 100%);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.nav-farma {
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 24px rgba(45, 60, 120, .10);
+}
+.nav-farma .nav-link { color: var(--farma-dark); font-weight: 800; }
+.nav-farma .nav-link.active { color: var(--pink); }
+.brand { color: var(--farma-dark) !important; font-weight: 950; letter-spacing: -.02em; }
+
+.hero-farma {
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  gap: 24px;
+  align-items: stretch;
+  color: #fff;
+  border-radius: 32px;
+  padding: clamp(24px, 4vw, 52px);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.25), transparent 22%),
+    radial-gradient(circle at 90% 20%, rgba(247,37,133,.35), transparent 28%),
+    linear-gradient(135deg, #3454d1, #00b8a9);
+  box-shadow: 0 24px 60px rgba(52, 84, 209, .22);
+  overflow: hidden;
+}
+.hero-farma h1 { font-size: clamp(2.3rem, 6vw, 5rem); font-weight: 950; margin: 0; letter-spacing: -.04em; }
+.hero-farma p { max-width: 760px; font-size: 1.13rem; opacity: .96; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+.hero-banner-card {
+  align-self: center;
+  min-height: 210px;
+  border-radius: 28px;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.28);
+  backdrop-filter: blur(12px);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.25);
+}
+.hero-banner-card span { font-weight: 800; margin-bottom: 12px; }
+.hero-banner-card strong { font-size: 1.7rem; line-height: 1.1; }
+.hero-banner-card small { margin-top: 14px; opacity: .9; }
+
+.section-title { font-weight: 950; color: #263b8f; letter-spacing: -.03em; }
+.buscador { max-width: 390px; border-radius: 18px; padding: .85rem 1rem; border: 1px solid rgba(52,84,209,.22); }
+.contador-productos { color: var(--farma-dark) !important; padding: .7rem 1rem; }
+
+.categorias-section { padding: 4px 0; }
+.categorias-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; }
+.categoria-tile {
+  border: 0;
+  border-radius: 22px;
+  min-height: 106px;
+  padding: 16px;
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 12px 30px rgba(45, 60, 120, .10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  color: var(--farma-dark);
+}
+.categoria-tile span { font-size: 2rem; }
+.categoria-tile strong { font-size: .95rem; }
+.categoria-tile:hover { transform: translateY(-5px); box-shadow: 0 18px 38px rgba(45, 60, 120, .16); }
+.categoria-tile.active { background: linear-gradient(135deg, var(--farma), var(--aqua)); color: #fff; }
+
+.producto-card, .form-card, .tabla-card, .carrito, .kpi-card {
+  border: 0;
+  border-radius: 24px;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 32px rgba(45, 60, 120, .10);
+}
+.producto-card { overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
+.producto-card:hover { transform: translateY(-6px); box-shadow: 0 22px 42px rgba(45, 60, 120, .16); }
+.img-wrap { height: 175px; display: grid; place-items: center; background: linear-gradient(135deg, #eef2ff, #e9fffb, #fff0f7); }
+.img-wrap img { width: 132px; height: 132px; object-fit: contain; filter: drop-shadow(0 12px 14px rgba(0,0,0,.13)); }
+.categoria-badge { align-self: start; color: var(--farma-dark) !important; }
+.descripcion { color: var(--muted); min-height: 48px; }
+.precio { font-size: 1.3rem; color: var(--farma-dark); }
+.btn-nova { background: linear-gradient(135deg, var(--farma), var(--aqua)); color: #fff; border: 0; border-radius: 16px; font-weight: 900; padding: .75rem 1rem; }
+.btn-nova:hover { color: #fff; filter: brightness(.97); }
+.btn-yape { background: linear-gradient(135deg, #7427c9, #9d4edd); color: #fff; border: 0; border-radius: 16px; font-weight: 900; padding: .75rem 1rem; }
+.btn-yape:hover { color: #fff; filter: brightness(.97); }
+
+.carrito { position: sticky; top: 86px; padding: 22px; }
+.carrito-items { display: grid; gap: 12px; max-height: 420px; overflow: auto; padding-right: 4px; }
+.carrito-item { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid #edf2f7; padding-bottom: 12px; }
+.carrito-item p { margin: 0; color: #68768a; }
+.cantidad { min-width: 24px; text-align: center; font-weight: 900; }
+.total-box { display: flex; align-items: center; justify-content: space-between; margin: 18px 0; padding: 16px; border-radius: 18px; background: var(--farma-soft); }
+.total-box strong { font-size: 1.5rem; color: var(--farma-dark); }
+
+.modal-visible { display: block; background: rgba(0,0,0,.45); }
+.pago-modal { border: 0; border-radius: 28px; overflow: hidden; }
+.qr-yape { width: 230px; max-width: 100%; border-radius: 22px; box-shadow: 0 12px 32px rgba(116,39,201,.22); }
+.monto-box { background: linear-gradient(135deg, #6f2cff, #9b4dff); color: white; border-radius: 18px; padding: 18px; box-shadow: 0 10px 25px rgba(111, 44, 255, 0.25); }
+.monto-label { display: block; font-size: 14px; opacity: .9; margin-bottom: 4px; }
+.monto-box h2 { font-size: 36px; font-weight: 900; margin: 0; }
+.mini-img { width: 54px; height: 54px; object-fit: contain; }
+.table { --bs-table-bg: transparent; }
+.table thead th { color: var(--farma-dark); }
+.kpi-card { display: inline-flex; flex-direction: column; padding: 22px 28px; }
+.kpi-card span { color: #667085; }
+.kpi-card strong { font-size: 2rem; color: var(--farma-dark); }
+.yape-badge { background: #7427c9; color: white; }
+
+@media (max-width: 991px) {
+  .hero-farma { grid-template-columns: 1fr; }
+  .carrito { position: static; }
+}
+
+.btn-mercado {
+  background: linear-gradient(135deg, #009ee3, #00b1ea);
+  border: none;
+  color: #fff;
+  font-weight: 800;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0, 158, 227, 0.24);
+}
+
+.btn-mercado:hover {
+  color: #fff;
+  filter: brightness(0.96);
+}
+
+.resultado-pago {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 42px 28px;
+  border-radius: 28px;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 18px 50px rgba(11, 53, 77, 0.12);
+  text-align: center;
+}
+
+.resultado-pago.ok {
+  border: 2px solid rgba(16, 185, 129, 0.25);
+}
+
+.resultado-pago h1 {
+  font-weight: 900;
+  margin-bottom: 14px;
+}

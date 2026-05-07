@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360">
+  <rect width="360" height="360" rx="34" fill="#7427c9"/>
+  <rect x="36" y="36" width="288" height="288" rx="20" fill="#fff"/>
+  <g fill="#111">
+    <rect x="62" y="62" width="72" height="72"/><rect x="82" y="82" width="32" height="32" fill="#fff"/>
+    <rect x="226" y="62" width="72" height="72"/><rect x="246" y="82" width="32" height="32" fill="#fff"/>
+    <rect x="62" y="226" width="72" height="72"/><rect x="82" y="246" width="32" height="32" fill="#fff"/>
+    <rect x="162" y="70" width="22" height="22"/><rect x="184" y="92" width="22" height="22"/><rect x="154" y="132" width="44" height="22"/>
+    <rect x="210" y="154" width="22" height="66"/><rect x="238" y="182" width="44" height="22"/><rect x="154" y="210" width="44" height="22"/>
+    <rect x="154" y="250" width="22" height="48"/><rect x="190" y="250" width="44" height="22"/><rect x="252" y="238" width="34" height="60"/>
+  </g>
+  <text x="180" y="343" text-anchor="middle" font-family="Arial" font-size="22" font-weight="800" fill="#fff">REEMPLAZA POR TU QR YAPE</text>
+</svg>
